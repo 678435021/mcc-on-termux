@@ -3,9 +3,9 @@ dir=$(pwd)
 
 read -p "Do you have 64 bit ARM processor [Y/n] (n for 32 bit): " arch64
 
-#pkg update --assume-yes
-#pkg upgrade --assume-yes
-#pkg install proot wget --assume-yes
+pkg update --assume-yes
+pkg upgrade --assume-yes
+pkg install proot wget --assume-yes
 
 # Install ubuntu
 cd $PREFIX/bin

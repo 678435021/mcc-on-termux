@@ -52,12 +52,13 @@ chmod +x MinecraftClient
 cd ..
 echo /usr/bin/MinecraftConsoleClient/MinecraftClient > mcc
 chmod +x mcc
+mkdir ~/MinecraftConsoleClient
 '
 cd $dir
 $PREFIX/bin/startubuntu "$installMCC"
-echo 'startubuntu cd ~/MinecraftConsoleClient; mcc' > $PREFIX/bin/mcc
-ln -s $PREFIX/bin/ubuntu-fs/root/MinecraftConsoleClient ~/MinecraftConsoleClient
+echo 'startubuntu "cd ~/MinecraftConsoleClient; mcc"' > $PREFIX/bin/mcc
 chmod +x $PREFIX/bin/mcc
+ln -s $PREFIX/bin/ubuntu-fs/root/MinecraftConsoleClient ~/MinecraftConsoleClient
 echo 'Installation complete'
 echo "run 'mcc' to start Minecraft Console Client"
 echo 'Minecraft Console Client config directory is at ~/MinecraftConsoleClient'

@@ -45,7 +45,7 @@ echo -e "export DOTNET_ROOT=/root/.dotnet/"\n"export PATH=$PATH:$DOTNET_ROOT:$DO
 #install mcc
 mkdir /usr/bin/MinecraftConsoleClient
 cd /usr/bin/MinecraftConsoleClient
-wget -O MinecraftClient-linux-$arch $mccDlLink
+wget -O MinecraftClient-linux-$arch.zip $mccDlLink
 unzip MinecraftClient-linux-$arch.zip
 rm MinecraftClient-linux-$arch.zip
 chmod +x MinecraftClient
@@ -55,8 +55,9 @@ chmod +x mcc
 '
 cd $dir
 $PREFIX/bin/startubuntu "$installMCC"
-echo 'startubuntu mcc' > $PREFIX/bin/
-ln $PREFIX/bin/ubuntu-fs/bin/MinecraftConsoleClient $PREFIX/MinecraftConsoleClient
+echo 'startubuntu cd ~/MinecraftConsoleClient; mcc' > $PREFIX/bin/
+ln -s $PREFIX/bin/ubuntu-fs/root/MinecraftConsoleClient ~/MinecraftConsoleClient
 chmod +x $PREFIX/bin/mcc
 echo 'Installation complete'
 echo "run 'mcc' to start Minecraft Console Client"
+echo 'Minecraft Console Client config directory is at ~/MinecraftConsoleClient'

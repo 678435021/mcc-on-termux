@@ -55,7 +55,7 @@ chmod +x mcc
 '
 cd $dir
 $PREFIX/bin/startubuntu "$installMCC"
-echo 'startubuntu cd ~/MinecraftConsoleClient; mcc' > $PREFIX/bin/
+echo 'startubuntu cd ~/MinecraftConsoleClient; mcc' > $PREFIX/bin/mcc
 ln -s $PREFIX/bin/ubuntu-fs/root/MinecraftConsoleClient ~/MinecraftConsoleClient
 chmod +x $PREFIX/bin/mcc
 echo 'Installation complete'

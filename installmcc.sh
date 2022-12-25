@@ -10,9 +10,9 @@ else
 fi
 
 # Install dependencies
-#pkg update --assume-yes
-#pkg upgrade --assume-yes
-#pkg install proot wget --assume-yes
+pkg update --assume-yes
+pkg upgrade --assume-yes
+pkg install proot wget --assume-yes
 
 # Install ubuntu
 cd $PREFIX/bin
@@ -25,8 +25,8 @@ rm installubuntu
 installMCC='
 install_dotnet () {
 	# Install dependencies
-	#apt update -y && apt upgrade -y
-	#apt install wget unzip libc6 libgcc1 libgssapi-krb5-2 libstdc++6 zlib1g libicu70 libssl3 libatomic1 -y
+	apt update -y && apt upgrade -y
+	apt install wget unzip libc6 libgcc1 libgssapi-krb5-2 libstdc++6 zlib1g libicu70 libssl3 libatomic1 -y
 
 	# Download dotnet if it s not already there
 	if [ "${ARCH,,}" == "arm64" ]; then
